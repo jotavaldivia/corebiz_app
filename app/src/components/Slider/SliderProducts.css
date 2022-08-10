@@ -4,6 +4,10 @@
     height: 100%;
   }
   
+  .swiper-wrapper{
+    align-items: flex-end !important;
+    margin-bottom: 2rem;
+  }
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -31,3 +35,43 @@
     object-fit: cover;
   }
   
+  .product_lastPrice,.product_price,.stars{
+    margin-block-end: 0.5rem;
+    margin-block-start: 0.5rem;
+    
+  }
+
+  .product_name{
+    color: #7A7A7A;
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .product_lastPrice{
+    color: #7A7A7A;
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .product_price{
+    color: #000000;
+    font-family: Nunito;
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  .swiper-button-next:after,  .swiper-button-prev:after {
+    color: #F8475F;
+}
+
+.product_buy{
+  display: inline-block;
+  margin-top: 1rem;
+  width: 100px;
+  padding: 10px 35px 10px 35px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}

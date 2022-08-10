@@ -1,0 +1,14 @@
+.stars_container{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+
+}
+
+.star_transparent{
+    color: rgb(99, 82, 82);
+}
+
+.star_orange{
+    color: #F8475F;
+}
