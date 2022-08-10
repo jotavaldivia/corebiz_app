@@ -1,0 +1,38 @@
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.search {
+  margin-top: 1.5rem;
+}
+
+.slider {
+  margin-top: 2rem;
+}
+
+.slider_product{
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.best_sellers{
+font-family: Nunito;
+font-weight: 800;
+}
+
+@media (min-width: 800px) {
+  .search {
+    width: 100%;
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider {
+height: 450px;
+  }
+}
+
