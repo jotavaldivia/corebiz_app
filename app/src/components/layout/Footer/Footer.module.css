@@ -68,5 +68,27 @@
     display: flex;
 }
 .corebiz_container img {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+@media (min-width: 800px) {
+    .footer_container {
+        display: flex;
+        justify-content: center;
+    }
+    .information {
+        width: 400px;
+    }
+    .contact_container {
+        width: 400px;
+    }
+    .development_container {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .corebiz_container {
+        margin-right: 1rem;
+    }
 }

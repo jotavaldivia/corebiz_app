@@ -1,4 +1,5 @@
-const setNewsletter = async (state, setLoading) => {
+const setNewsletter = async (firstName, email) => {
+    console.log("datos ingresados", firstName, email)
     try {
         const requestOptions = {
             method: 'POST',
