@@ -6,7 +6,7 @@ const Stars = ({stars}) => {
     <div className={style.stars_container}>
         {
             counts.map(count =>{
-              return  stars >= count ? <p className={style.star_orange}>★</p> : <p className={style.star_transparent}>★</p>
+              return  stars >= count ? <p key={count} className={style.star_orange}>★</p> : <p key={count}  className={style.star_transparent}>★</p>
             })
         }
         

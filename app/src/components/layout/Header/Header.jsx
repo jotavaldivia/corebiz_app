@@ -6,7 +6,7 @@ import Cart from "../../../assets/images/cart.jpg";
 import Search from "../../../components/Search/Search";
 import User from '../../../assets/images/user.jpg'
 
-const Header = () => {
+const Header = ({countCart}) => {
   return (
     <>
       <div className={style.container_header}>
@@ -21,7 +21,8 @@ const Header = () => {
         </div>
         <div className={style.container_cart}>
           <img className={style.cart} src={Cart} alt="" />
-          <p className={style.count}>1</p>
+          {/* <p className={style.count}>{countCart.length}</p> */}
+          <p className={style.count}>{countCart.length -1 }</p>
         </div>
       </div>
     </>
