@@ -15,6 +15,7 @@ import Banner3 from '../../assets/images/banner3.webp';
 import Banner4 from '../../assets/images/banner4.webp';
 
 import { setNewsletter } from '../../services/NewsLetter';
+import Footer from '../../components/layout/Footer/Footer';
 
 const Home = () => {
     const [allProducts, setAllProducts] = useState([]);
@@ -22,7 +23,7 @@ const Home = () => {
     const [cart, setCart] = useState(
         JSON.parse(window.localStorage.getItem('cart')) ?? [0]
     );
-    setNewsletter()
+    setNewsletter();
 
     useEffect(() => {
         setLoading(true);
@@ -64,6 +65,9 @@ const Home = () => {
                 <h2 className={style.best_sellers}>Más Vendidos</h2>
                 {loading && <h3>Cargando...</h3>}
                 <SilderProducts products={allProducts} addProduct={addProduct} />
+            </div>
+            <div className={style.footer}>
+                <Footer />
             </div>
         </>
     );
