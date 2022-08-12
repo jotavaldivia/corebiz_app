@@ -8,3 +8,7 @@ cd app
 npm install
 npm run dev
 ```
+
+#####PD: para visualizar el aumento en la cantidad de productos, se debe ver en consola.
+
+[![N|Solid]('../../src/assets/images/console.png)]()
