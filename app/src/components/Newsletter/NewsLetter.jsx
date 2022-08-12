@@ -17,7 +17,7 @@ const NewsLetter = () => {
         }
 
         if (!validator.isEmail(email)) {
-            alert('el correo es invalido, favor ingresar nuevamente');
+            alert('el correo es invalido, favor ingresarlo nuevamente');
             return;
         }
         setNewsletter(firstName, email);

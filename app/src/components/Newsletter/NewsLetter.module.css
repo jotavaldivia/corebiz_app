@@ -38,6 +38,9 @@
 }
 
 @media (min-width: 800px) {
+    .newsletter_container {
+        margin-top: 3rem;
+    }
     .newsletter_inputs {
         flex-direction: row;
     }

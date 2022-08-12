@@ -31,22 +31,38 @@ const Home = () => {
 
     const addProduct = (value, cant) => {
         if (cart[0] === null) {
-            setCart([{ ...value }]);
-            localStorage.setItem('cart', JSON.stringify([{ ...value }]));
+            setCart([{ ...value,"quantity":cant }]);
+            localStorage.setItem('cart', JSON.stringify([{ ...value,"quantity":cant }]));
             console.log('nuevo valor', ...value);
+            alert("producto agregado al carrito")
             return;
         }
-        console.log('anterior', ...cart);
-        console.log('nuevo valor', value);
-        const resp = cart.some((cart) => cart.productId === value.productId);
+        // console.log('anterior', ...cart);
+        // console.log('nuevo valor', value);
+        const resp = cart.find((cart) => {
+            if(cart.productId === value.productId){
+                return cart.quantity = cart.quantity +cant
+            }
+        });
         if (resp) {
-            alert('el producto ya existe');
+        //    console.log(resp)
+           const newCart = cart.map((cart) => {
+            if(cart.productId === value.productId){
+                return  resp
+            }else{
+                return cart
+            }
+        });
+        console.table(newCart)
+        localStorage.setItem('cart', JSON.stringify(newCart));
+        alert("producto agregado al carrito")
             return;
         }
-        let newValue = [...cart, value];
+        let newValue = [...cart, {...value,"quantity":cant}];
         console.log('valor fucionado', newValue);
         setCart(newValue);
         localStorage.setItem('cart', JSON.stringify(newValue));
+        alert("producto agregado al carrito")
     };
 
     return (
